@@ -1,3 +1,4 @@
+  
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 
 \usepackage{setspace}
@@ -137,22 +138,14 @@ A fair dice is tossed two times. The probability that the second toss results in
 \begin{center}
   \section{\textbf{Solution}} 
 \end{center}
-Let $X \epsilon \{0,1,2\}$ represent a random variable where
+Let $X_1$ and $X_2$ represent the first toss and second toss respectively.
 \begin{itemize}
-    \item 0 $\rightarrow$ both the tosses are equal.
-    \item 1 $\rightarrow$ first toss value is greater than second toss value.
-    \item 2 $\rightarrow$ second toss value is greater than first toss value.
+    \item 0 if $X_1 = 1$, then no of cases that second toss value is greater than first value toss is 5. Similarly,
+    \item 1  if $X_1 = 2$, then no. of cases is 4.
+    \item 2  if $X_1 = 3$, then no. of cases is 3.
+    \item 3  if $X_1 = 4$, then no. of cases is 2.
+    \item 4  if $X_1 = 5$, then no. of cases is 1.
+    \item 5  if $X_1 = 6$, then no. of cases is 0.
 \end{itemize}
-As 
-\begin{align}
-    \pr{X=0} &= \frac{1}{6} \\
-    \pr{X=1} &= \pr{X=2} \\
-\end{align}
-and \pr{X=0} + \pr{X=1} + \pr{X=2} &= 1\\
-So the probability that the second toss value is greater than first toss value is  $$\pr{X=1} &= \pr{X=2} &= \frac{1-\pr{X=0}}{2}$$
-
-\begin{align}
-   \pr{X=2} &= \frac{1-\frac{1}{6}}{2} &= \frac{\frac{5}{6}}{2} &= \frac{5}{12}
-\end{align}
-So the probability that second toss value is greater than first toss value is $\frac{5}{12}$.
+As total no. of cases are $6*6 = 36$, the probability that second toss value is greater than first toss value is $$P = \pr {X_2 > X_1} = \frac{5 + 4 + 3 + 2 + 1}{36} = \frac{10}{36} = \frac{5}{12}$$
 \end{document}
