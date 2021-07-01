@@ -1,4 +1,3 @@
-  
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 
 \usepackage{setspace}
@@ -123,7 +122,7 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 Download all python codes from 
 \begin{lstlisting}
-https://github.com/Yagna20/AI1103/blob/main/Assignment1/Assignment%201.py
+https://github.com/Yagna20/AI1103/blob/main/Assignment%202/assignment%202.py
 \end{lstlisting}
 %
 and latex-tikz codes from 
@@ -139,13 +138,9 @@ A fair dice is tossed two times. The probability that the second toss results in
   \section{\textbf{Solution}} 
 \end{center}
 Let $X_1$ and $X_2$ represent the first toss and second toss respectively.
-\begin{itemize}
-    \item 0 if $X_1 = 1$, then no of cases that second toss value is greater than first value toss is 5. Similarly,
-    \item 1  if $X_1 = 2$, then no. of cases is 4.
-    \item 2  if $X_1 = 3$, then no. of cases is 3.
-    \item 3  if $X_1 = 4$, then no. of cases is 2.
-    \item 4  if $X_1 = 5$, then no. of cases is 1.
-    \item 5  if $X_1 = 6$, then no. of cases is 0.
-\end{itemize}
-As total no. of cases are $6*6 = 36$, the probability that second toss value is greater than first toss value is $$P = \pr {X_2 > X_1} = \frac{5 + 4 + 3 + 2 + 1}{36} = \frac{10}{36} = \frac{5}{12}$$
+Total no.of pairs of tosses is $$6*6 = 36$$ and total no.of outcomes where second toss is greater than first toss is $$\tbinom{6}{2} = 15$$
+That means,
+
+\pr{X=2 > X=1} &= \dfrac{15}{36} &= \dfrac{5}{12}
+
 \end{document}
