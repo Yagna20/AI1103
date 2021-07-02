@@ -138,9 +138,14 @@ A fair dice is tossed two times. The probability that the second toss results in
   \section{\textbf{Solution}} 
 \end{center}
 Let $X_1$ and $X_2$ represent the first toss and second toss respectively.
-Total no.of pairs of tosses is $$6*6 = 36$$ and total no.of outcomes where second toss is greater than first toss is $$\tbinom{6}{2} = 15$$
-That means,
-
-\pr{X=2 > X=1} &= \dfrac{15}{36} &= \dfrac{5}{12}
+\begin{equation}
+\begin{split}
+    \pr{X_2 > X_1} & = \sum_{n=1}^{6} \pr{X_2 > n / X_1 = n} \\
+     & = \sum_{n=1}^{6} \dfrac{\pr{X_2 > n \& X_1 = n}}{\pr{X_1 = n}} \\
+     & = \sum_{n=1}^{6} \pr{X_2 > n} \\
+     & = \frac{15}{36} \\
+     & = \frac{5}{12}
+\end{split}
+\end{equation}
 
 \end{document}
